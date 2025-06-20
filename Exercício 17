@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunta matemática</title>
+</head>
+<body>
+    <script>
+        function corrigir(){
+            let acertos = 0;
+
+            const q1=document.formulario.q1.value;
+            if(q1 === "c"){
+                acertos++;
+            }
+
+            const q2=document.formulario.q2.value;
+            if(q2 === "b"){
+                acertos++;
+            }
+
+             const q3=document.formulario.q3.value;
+            if(q3 === "a"){
+                acertos++;
+            }
+            alert("Você acertou " + acertos + " de 3 questões")
+        }
+        </script>
+
+     <h2>1) Qual é o valor de x na equação 5x*9=45?</h2>
+    <form name="formulario">
+      <input type= "radio" name="q1" value="a">a) 2<br>
+
+       <input type= "radio" name="q1" value="b" >b) 25<br>
+     
+       <input type= "radio" name="q1" value="c">c) 1<br>
+     
+       <input type= "radio" name="q1" value="d" >d)0,5<br>
+
+
+     <h2>2) Qual é a média aritmética dos números 6, 8, 12 e 14?</h2>
+    <form name="formulario">
+      <input type= "radio" name="q2" value="a">a) 8<br>
+
+       <input type= "radio" name="q2" value="b" >b) 9<br>
+     
+       <input type= "radio" name="q2" value="c">c) 10<br>
+     
+       <input type= "radio" name="q2" value="d" >d)11<br>
+
+     <h2>3) Qual é a raíz quadrada de 121?</h2>
+    <form name="formulario">
+      <input type= "radio" name="q3" value="a">a) 11<br>
+
+       <input type= "radio" name="q3" value="b" >b) 12<br>
+     
+       <input type= "radio" name="q3" value="c">c) 13<br>
+     
+       <input type= "radio" name="q3" value="d" >d)14<br>
+
+       <button type="button" onclick="corrigir()">Corrigir</button>
+
+
+     
+</body>
+</html>
+
