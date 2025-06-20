@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliques botão</title>
+    <script src="contarcliques.js" defer></script>
+</head>
+<body>
+    <button id="btnContador">Clique</button>
+    <p>Você clicou <span id="contador"> 0</span> vezes.</p>
+</body>
+</html>
+contarcliques.js
+let cliques=0;
+document.addEventListener("DOMContentLoaded", function(){
+    const botao=document.getElementById("btnContador");
+    const contador=document.getElementById("contador");
+
+    botao.addEventListener("click",function(){
+        cliques++;
+        contador.textContent=cliques;
+    });
+});
