@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+</head>
+<body>
+    <div id="tempo">00:00:00</div>
+    <button onclick="iniciar()">Iniciar</button>
+    <button onclick="pausar()">Pausar</button>
+    <button onclick="zerar()">Zerar</button>
+
+    <script>
+        let segundos=0;
+        let minutos=0;
+        let horas=0;
+        let intervalo=null;
+
+        function atualizarTela(){
+            const tempoFormatado=
+            (horas < 10 ? '0' + horas : horas)+':'+
+            (minutos < 10 ? '0' + minutos : minutos)+':'+
+            (segundos < 10 ? '0' + segundos : segundos);
+            document.getElementById("tempo").textContent=tempoFormatado;
+
+        }
+        function iniciar(){
+            if(intervalo) return;
+            intervalo=setInterval(() => {
+                segundos++;
+                if(segundos===60){
+                    segundos=0;
+                    minutos++;
+                    if(minutos===60){
+                        minutos=0;
+                        horas++;
+                    }
+                }
+                atualizarTela();
+            },1000);
+        }
+
+        function pausar(){
+            clearInterval(intervalo);
+            intervalo=null;
+        }
+
+        function zerar(){
+            pausar();
+            segundos=0;
+            minutos=0;
+            horas=0;
+            atualizarTela();
+        }
+    </script>
+</body>
+</html>
