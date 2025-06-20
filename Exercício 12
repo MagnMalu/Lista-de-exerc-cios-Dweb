@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunta</title>
+</head>
+<body>
+    <h2>Qual é o país considerado o maior do mundo em extensão territorial?</h2>
+    <form name="formulario">
+      <input type= "radio" name="pais" value="sim" onclick="responder(1)">Estados Unidos<br>
+
+       <input type= "radio" name="pais" value="sim" onclick="responder(2)">Rússia<br>
+     
+       <input type= "radio" name="pais" value="sim" onclick="responder(3)">Brasil<br>
+     
+       <input type= "radio" name="pais" value="sim" onclick="responder(4)">China<br>
+
+      <script src="alternativas.js"></script>
+     
+     
+
+</body>
+</html>
+
+alternativas.js
+function responder(opcao){
+    const resultado=document.getElementById("resultado");
+    if(opcao===2){
+        alert("Parabéns!Você acertou!");
+    }else{
+        alert("Errado, tente novamente");
+    }
+
+}
