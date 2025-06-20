@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternativas cor</title>
+</head>
+<body>
+    <input type= "radio" name="cor" value="sim" onclick="responder(1)">Vermelho<br>
+
+       <input type= "radio" name="cor" value="sim" onclick="responder(2)">Azul<br>
+     
+       <input type= "radio" name="cor" value="sim" onclick="responder(3)">Amarelo<br>
+     
+       <input type= "radio" name="cor" value="sim" onclick="responder(4)">Branco<br>
+
+      <script src="mudarcor1.js"></script>
+</body>
+</html>
+
+mudarcor1.js
+function responder(opcao) {
+    if(opcao === 1){
+        document.body.style.backgroundColor="red"
+    }else if(opcao===2){
+        document.body.style.backgroundColor="blue"
+    }else if(opcao===3){
+        document.body.style.backgroundColor="yellow"
+    }else if(opcao===4){
+        document.body.style.backgroundColor="white"
+    }
+}
+
