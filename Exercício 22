@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parágrafo desaparece</title>
+</head>
+<body>
+    <p id="paragrafo">
+        Machado de Assis(1839-1908), escrevendo Dom Casmurro, produziu um dos maiores livros da literatura universal. Mas criando Capitu, a espantosa menina de "olhos oblíquos e dissimulados", de "olhos de ressaca", Machado nos legou um incrível mistério, um mistério até hoje indecifrado.
+    </p>
+
+    <script>
+        const paragrafo=document.getElementById("paragrafo");
+        paragrafo.addEventListener("dblclick",function (){
+            paragrafo.style.display="none";
+        });
+    </script>
+</body>
+</html>
+
