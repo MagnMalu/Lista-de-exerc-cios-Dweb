@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Luiza</title>
+    <link rel="stylesheet" href="perfil.css">
+     <script src="validar.js" defer></script>
+</head>
+<body>
+    <section class ="perfil">
+        <h2>Maria Luiza Magnusson</h2>
+        <img src="foto Malu.jpg" alt="Foto de Maria Luiza" class="foto-perfil">
+        <p> Sejam bem-vindos ao meu perfil pessoal. Sou a Maria Luiza Magnusson, tenho 16 anos e sou estudante do Instituto Federal Campus Salto.</p>
+        <h2>Meus hobbies</h2>
+        <ul>
+            <li>Ler livros de suspense e romance</li>
+            <li>Estudar idiomas</li>
+            <li>Ouvir música</li>
+        </ul>
+
+        <form id="formulario-perfil">
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome"><br><br>
+
+            <label for="descricao">Descrição:</label><br>
+            <textarea id="descricao" name="descricao"></textarea><br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="mensagem-erro" style="color:red;"></p>
+    </section>
+</body>
+</html>
+
+perfil.css
+body{
+    font-family:'Times New Roman', Times, serif;
+    background-color:lightpink;
+    margin:0;
+    padding:0;
+}
+.perfil{
+    max-width:600px;
+    margin:50px auto;
+    background-color: pink;
+    padding:30px;
+    border-radius:10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1)
+}
+.perfil h1{
+    color:#333;
+    font-size:2em;
+    margin-bottom:10px;
+}
+.foto-perfil{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:20px;
+}
+.perfil p{
+    font-size:1.1em;
+    color:#333;
+    line-height:1.6;
+}
+.perfil ul{
+    list-style-type:disc;
+    padding-left:20px;
+}
+.perfil ul li{
+    margin-bottom:8px
+}
+form{
+    margin-top:20px;
+}
+
+validar.js
+document.addEventListener("DOMContentLoaded", function(){
+    const form=document.getElementById("formulario-perfil");
+    const nome=document.getElementById("nome");
+    const descricao=document.getElementById("descricao");
+    const erro=document.getElementById("mensagem-erro");
+
+    form.addEventListener("submit",function (e){
+        erro.textContent="";
+
+        if(nome.value.trim() ===""|| descricao.value.trim()===""){
+            e.preventDefault();
+            erro.textContent= "Preencha todos os campos, por favor."
+        }
+    });
+});
