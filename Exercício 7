@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Página de Contato</title>
+</head>
+<body>
+    <h2>Página de Contato</h2>
+    <form name="formulario">
+        Nome: <input type="text" name="nome"><br/>
+        E-mail: <input type="email" name="email"><br/>
+        Assunto: <input type="text" name="assunto"><br/>
+        Mensagem:<br/>
+        <textarea name="mensagem" rows="4" cols="30"></textarea><br/>
+
+        <input type="button" value="Enviar" onclick="Enviar()">
+    </form>
+
+    <script src="Enviar.js"></script>
+</body>
+</html>
+
+Enviar.js
+function Enviar(){
+    var nome=document.formulario.nome.value;
+    var email=document.formulario.email.value;
+    var assunto=document.formulario.assunto.value;
+    var mensagem=document.formulario.mensagem.value;
+
+    alert("Mensagem enviada");
+}
