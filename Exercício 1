@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou ímpar</title>
+</head>
+<body>
+    <form name="formulario">
+        Número: <input type="text" name="numero"><br/>
+       
+        <input type="button" value="Verificar" onclick="Verificar()">
+    </form>
+
+    <script src="Verificar.js"></script>
+   
+</body>
+</html>
+
+
+Verificar.js
+function Verificar(){
+    numero= parseFloat(document.formulario.numero.value);
+
+    if(numero%2==0){
+        alert("O número" + numero + "é PAR")
+    }else{
+        alert("O número" + numero + "é ÍMPAR");
+    }
+    }
+
