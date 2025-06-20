@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="formulario">
+        Peso:<input type="text" name="peso"><br/>
+        Altura: <input type="text" name="altura"><br/>
+
+        <input type="button" value="calcular" onclick="calcularIMC()">
+    </form>
+
+    <script src="imc.js"></script>
+</body>
+</html>
+
+imc.js
+
+function calcularIMC(){
+    peso= parseFloat(document.formulario.peso.value);
+    altura= parseFloat(document.formulario.altura.value);
+    resultado= (peso/(altura**2)).toFixed(2)
+    alert("Seu IMC é:"+resultado);
+}
