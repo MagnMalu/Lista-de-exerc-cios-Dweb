@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudação</title>
+</head>
+<body>
+     <form name="formulario">
+        Nome:<input type="text" name="Nome"><br/>
+        <input type="button" value="Enviar" onclick="enviarnome()">
+    </form>
+    <script>
+function enviarnome(){
+    let Nome=document.formulario.Nome.value;
+     alert("Olá"+ Nome+".Seja bem-vindo(a)");
+}
+
+</script>
+</body>
+</html>
