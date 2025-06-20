@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mudarcor</title>
+</head>
+<body>
+    <button id="btnCor">Alterar Cor</button>
+
+    <script>
+const bptap=document.getElementById("btnCor");
+bptap.addEventListener("click",function(){
+
+    const cores=["lightpink","lightblue","lightgreen","lavender"];
+    const corAleatoria=cores[Math.floor(Math.random()*cores.length)]
+    bptap.style.backgroundColor=corAleatoria;
+});
+
+    </script>
+</body>
+</html>
