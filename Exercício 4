@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero Aleatorio</title>
+</head>
+<body>
+    <label for="palpite">Seu palpite:</label>
+    <input type="number" id="palpite" min="1" max="10">
+    <button onclick="verificarPalpite()">Enviar</button>
+   
+    <p id="resultado"></p>
+    <script>
+        const numeroAleatorio=Math. floor(Math.random()*10)+1;
+        function verificarPalpite(){
+            const palpite=parseInt(document.getElementById("palpite").value)
+            const resultado=document.getElementById("resultado");
+
+            if(palpite==numeroAleatorio){
+                alert("Parabéns!Você acertou")
+            }else{
+                alert("Você errou, tente novamente")
+            }
+        }
+    </script>
+</body>
+</html>
