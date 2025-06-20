@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="formulario">
+        Nota1:<input type="text " name="Nota1"><br/>
+        Nota2: <input type="text" name="Nota2"><br/>
+        Nota3: <input type="text" name="Nota3"><br/>
+
+
+        <input type="button" value="calcular media"
+        onclick="calcularmedia()">
+
+    </form>
+
+    <script src="media.js"></script>
+</body>
+</html>
+
+media.js
+function calcularmedia(){
+    Nota1= parseFloat(document.formulario.Nota1.value);
+    Nota2= parseFloat(document.formulario.Nota2.value);
+    Nota3= parseFloat(document.formulario.Nota3.value);
+
+    resultado= ((Nota1+Nota2+Nota3)/3).toFixed(2)
+
+    if(resultado>=6){
+        alert(resultado+ "Aprovado");
+    }
+    else{
+        alert(resultado+ "Reprovado")
+    }
+}
